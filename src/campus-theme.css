@@ -1,0 +1,369 @@
+:root {
+  --purple: #2f6e5d;
+  --purple-dark: #285a4c;
+  --navy: #202b29;
+  --muted: #68746f;
+  --line: #e6e8e3;
+  --surface: #fff;
+  --bg: #f7f6f1;
+  --green: #2f6e5d;
+  --campus-accent: #b66b4e;
+  --campus-sage: #e5eee8;
+  --shadow: 0 10px 28px rgba(31, 50, 41, .08);
+  color: var(--navy);
+  background: var(--bg);
+}
+
+body,
+.app-shell,
+.landing-page {
+  background: var(--bg);
+  color: var(--navy);
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(47, 110, 93, .3);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: #dce9e1;
+  color: #214c40;
+}
+
+.button.button-primary,
+.button.button-primary:visited {
+  background: #2f6e5d;
+  border-color: #2f6e5d;
+  box-shadow: 0 2px 5px rgba(38, 88, 73, .14);
+}
+
+.button.button-primary:hover {
+  background: #285a4c;
+  border-color: #285a4c;
+}
+
+.button.button-primary:disabled {
+  background: #a7bbb0;
+  border-color: #a7bbb0;
+}
+
+.logo-loop,
+.text-button,
+.deal-claim,
+.category-tab.active,
+.side-link.active,
+.mobile-bottom-nav button.active,
+.admin-nav-link.active {
+  color: #2f6e5d;
+}
+
+.landing-hero-copy h1 span,
+.welcome-row h1 span,
+.section-heading h2 span,
+.feature-copy h2 em,
+.deals-intro-copy h2 em,
+.id-info-panel h3 span {
+  color: #2f6e5d;
+}
+
+.logo-mark span {
+  background: #2f6e5d;
+}
+
+.logo-mark span:nth-child(4) {
+  background: #a9c5b5;
+}
+
+.eyebrow {
+  color: #426c5d;
+}
+
+.eyebrow-dot,
+.filter-dot {
+  background: #55856f;
+}
+
+.product-grid {
+  gap: 18px;
+}
+
+.product-card,
+.form-card,
+.verification-status-card,
+.deal-card,
+.activity-table {
+  border-radius: 14px;
+}
+
+.product-card {
+  border-color: #e5e8e2;
+}
+
+.product-card:hover {
+  border-color: #bfd2c5;
+  box-shadow: 0 10px 25px rgba(34, 57, 45, .1);
+}
+
+.top-search,
+.deals-search,
+.filter-panel {
+  border-color: #e2e5de;
+}
+
+.top-search {
+  background: #f4f5ef;
+}
+
+.main-content {
+  padding-left: clamp(24px, 4vw, 58px);
+  padding-right: clamp(24px, 4vw, 58px);
+}
+
+.button-outline:hover,
+.filter-toggle:hover {
+  border-color: #a9c5b5;
+  background: #f5f8f4;
+}
+
+.status-pill.approved,
+.status-pill.available,
+.verified-text,
+.seller-verified {
+  color: #286b51;
+}
+
+.status-pill.approved,
+.status-pill.available {
+  background: #e7f1e9;
+}
+
+.student-id-card {
+  background: linear-gradient(135deg, #244d42, #326c59 66%, #477960);
+}
+
+.admin-shield {
+  background: #2f6e5d;
+}
+
+.admin-live i,
+.admin-pip {
+  background: #398261;
+}
+
+.admin-create-form {
+  display: grid;
+  gap: 14px;
+  padding: 20px;
+  margin: 0 0 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.live-document {
+  min-height: 380px;
+  overflow: hidden;
+  background: #f3f5f1;
+}
+
+.live-document img,
+.live-document iframe {
+  display: block;
+  width: 100%;
+  min-height: 380px;
+  border: 0;
+  object-fit: contain;
+  background: #fff;
+}
+
+.activity-row-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.activity-row-actions .text-button {
+  font-size: 12px;
+}
+
+.activity-detail {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.activity-placeholder {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--campus-sage);
+  color: #426c5d;
+}
+
+.request-dates {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.request-dates > small {
+  grid-column: 1 / -1;
+  color: var(--muted);
+}
+
+.request-message-field {
+  margin-top: 14px;
+}
+
+.business-coupon-card {
+  max-width: 620px;
+  padding: clamp(20px, 4vw, 36px);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 520px) {
+  .request-dates {
+    grid-template-columns: 1fr;
+  }
+
+  .request-dates > small {
+    grid-column: auto;
+  }
+}
+
+.business-coupon-card h2 {
+  margin: 14px 0 8px;
+}
+
+.business-coupon-card > p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.business-coupon-card form {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.business-coupon-card form > input {
+  width: 100%;
+  height: 46px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--navy);
+  font-family: 'DM Mono', monospace;
+  letter-spacing: .06em;
+}
+
+.coupon-validation-result {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #f4f6f2;
+}
+
+.coupon-validation-result.approved {
+  background: #e7f1e9;
+  color: #245b46;
+}
+
+.coupon-validation-result.rejected {
+  background: #fff0ef;
+  color: #923f40;
+}
+
+.coupon-validation-result > span {
+  font-weight: 700;
+}
+
+.coupon-validation-result p {
+  margin: 4px 0 0;
+}
+
+.redeem-confirm {
+  display: grid;
+  gap: 10px;
+  padding: 15px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #f7f8f5;
+}
+
+.redeem-confirm h3,
+.redeem-confirm p {
+  margin: 0;
+}
+
+.redeem-confirm p {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.redeem-success {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+}
+
+.redeem-success svg {
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.auth-notice {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+}
+
+.auth-notice > span {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--campus-sage);
+  color: #2f6e5d;
+}
+
+.auth-notice > p {
+  margin: 0;
+}
+
+.admin-sample.live {
+  color: #286b51;
+}
+
+@media (max-width: 680px) {
+  .main-content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .product-grid {
+    gap: 10px;
+  }
+
+  .activity-row-actions {
+    gap: 4px;
+  }
+}
